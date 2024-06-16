@@ -46,7 +46,7 @@ class DocumentController extends Controller
                 'file_path' => $path,
             ]);
 
-            return response()->json(['document' => $document], 201);
+            return response()->json($document, 201);
         } catch (\Exception $e) {
             return response()->json(['error' => 'Document upload failed'], 500);
         }

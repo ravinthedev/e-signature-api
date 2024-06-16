@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\SignatureRequest;
-use App\Http\Requests\CreateSignatureRequest;
+use App\Http\Requests\NewSignatureRequest;
 use App\Http\Requests\SignDocumentRequest;
 use Illuminate\Http\Request;
 
@@ -73,7 +73,7 @@ class SignatureRequestController extends Controller
      *     )
      * )
      */
-    public function requestSignature(CreateSignatureRequest $request)
+    public function requestSignature(NewSignatureRequest $request)
     {
         try {
             $signatureRequest = SignatureRequest::create([
@@ -114,7 +114,6 @@ class SignatureRequestController extends Controller
     {
         try {
             $signatureRequest = SignatureRequest::findOrFail($id);
-
             if ($signatureRequest->signer_id !== $request->user()->id) {
                 return response()->json(['message' => 'Unauthorized'], 403);
             }

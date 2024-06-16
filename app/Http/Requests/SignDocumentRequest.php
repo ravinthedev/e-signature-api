@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Contracts\Validation\Validator;
 
-class CreateSignatureRequest extends FormRequest
+class SignDocumentRequest extends FormRequest
 {
     public function authorize()
     {
@@ -15,10 +15,8 @@ class CreateSignatureRequest extends FormRequest
 
     public function rules()
     {
-        return [
-            'document_id' => 'required|exists:documents,id',
-            'signer_id' => 'required|exists:users,id',
-        ];
+        // Since we are just signing a document, no additional validation is required here.
+        return [];
     }
 
     public function failedValidation(Validator $validator)
@@ -32,11 +30,6 @@ class CreateSignatureRequest extends FormRequest
 
     public function messages()
     {
-        return [
-            'document_id.required' => 'Document ID is required',
-            'document_id.exists' => 'Document ID must exist in the documents table',
-            'signer_id.required' => 'Signer ID is required',
-            'signer_id.exists' => 'Signer ID must exist in the users table',
-        ];
+        return [];
     }
 }
