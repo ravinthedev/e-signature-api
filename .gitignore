@@ -1,0 +1,66 @@
+# Laravel & PHP related
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+/storage/app/public
+/.env
+/.env.*.backup
+/.env.backup
+
+# Ignoring the compiled asset files
+/public/hot
+/public/storage
+/public/mix-manifest.json
+/public/hot
+/public/js/*.js
+/public/css/*.css
+
+# Ignore .env and environment-specific files
+/.env
+/.env.*
+
+# Composer related files
+/composer.phar
+/composer.lock
+
+# IDE related files
+/.idea
+/.phpstorm.meta.php
+/.vscode
+
+# Laravel log, cache, and other files
+/storage/logs
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/views
+/storage/framework/testing
+
+# Laravel Mix related
+/npm-debug.log
+/yarn-error.log
+/yarn-debug.log
+
+# NPM related
+/node_modules
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Other files and folders to ignore
+Homestead.yaml
+Homestead.json
+.env.testing
+/.env.backup
+/.phpunit.result.cache
+
+# Ignore the local environment
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.e2e
+.env.e2e.local
+
+# Ignore deployment files
+/deploy
