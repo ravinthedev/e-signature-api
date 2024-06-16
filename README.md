@@ -10,15 +10,10 @@
 - Introduction
 - Objective
 - Features
-- Requirements
 - Setup Instructions
   - Docker Setup
   - Running Unit Tests
 - API Documentation
-- Deliverables
-- Evaluation Criteria
-- Deployment
-- Contributing
 - License
 
 ## Introduction
@@ -105,9 +100,10 @@ php artisan test
 docker-compose exec app php artisan l5-swagger:generate
    ```
 
-3. **Access the Swagger UI:**
+2. **Access the Swagger UI:**
 
    The Swagger documentation will be available at [http://localhost/api/documentation](http://localhost/api/documentation).
+
 
 
 ## License
