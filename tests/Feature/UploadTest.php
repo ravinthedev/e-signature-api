@@ -17,7 +17,7 @@ class UploadTest extends TestCase
         $user = User::factory()->create([
             'name' => 'test user',
             'email' => 'john@example.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
         ]);
         $this->actingAs($user, 'sanctum');
 

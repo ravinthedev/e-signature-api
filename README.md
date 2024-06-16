@@ -48,7 +48,7 @@ Create a basic E-Signature API using Laravel that allows users to e-sign documen
 1. **Clone the repository:**
 
 ```
-git clone git@github.com:ravinthedev/e-signature-api.git
+git clone https://github.com/ravinthedev/e-signature-api.git
 cd e-signature-api
    ```
 
@@ -108,11 +108,6 @@ docker-compose exec app php artisan l5-swagger:generate
 3. **Access the Swagger UI:**
 
    The Swagger documentation will be available at [http://localhost/api/documentation](http://localhost/api/documentation).
-
-
-## Demo
-
-Check out the live demo of the API at [http://your-demo-link.com](http://your-demo-link.com).
 
 
 ## License

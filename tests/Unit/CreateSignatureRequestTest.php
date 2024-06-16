@@ -2,11 +2,11 @@
 
 namespace Tests\Unit;
 
-use App\Models\User;
 use App\Models\Document;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Tests\TestCase;
 use Laravel\Sanctum\Sanctum;
+use Tests\TestCase;
 
 class CreateSignatureRequestTest extends TestCase
 {
@@ -25,7 +25,6 @@ class CreateSignatureRequestTest extends TestCase
             'signer_id' => $signer->id,
         ]);
 
-
         $response->assertStatus(201)
             ->assertJsonStructure([
                 'signature_request' => [
@@ -34,9 +33,9 @@ class CreateSignatureRequestTest extends TestCase
                     'requester_id',
                     'signer_id',
                     'created_at',
-                    'updated_at'
-                ]
+                    'updated_at',
+                ],
             ]);
 
-       }
+    }
 }

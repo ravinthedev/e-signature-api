@@ -2,13 +2,13 @@
 
 namespace Tests\Unit;
 
-use App\Models\User;
 use App\Models\Document;
 use App\Models\SignatureRequest;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
-use Tests\TestCase;
 use Laravel\Sanctum\Sanctum;
+use Tests\TestCase;
 
 class SignDocumentTest extends TestCase
 {
@@ -36,14 +36,11 @@ class SignDocumentTest extends TestCase
             'requester_id' => $user->id,
         ]);
 
-
         // Send the sign request
         $response = $this->postJson("/api/signature-requests/{$signatureRequest->id}/sign");
-
 
         // Check response and status
         $response->assertStatus(200)
             ->assertJsonPath('signature_request.status', 'signed');
     }
 }
-

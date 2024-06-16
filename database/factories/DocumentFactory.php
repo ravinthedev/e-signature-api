@@ -15,7 +15,7 @@ class DocumentFactory extends Factory
         return [
             'user_id' => User::factory(),
             'title' => $this->faker->sentence,
-            'file_path' => 'documents/' . $this->faker->word . '.pdf', // example file path
+            'file_path' => 'documents/'.$this->faker->word.'.pdf', // example file path
         ];
     }
 }

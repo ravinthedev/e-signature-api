@@ -16,7 +16,7 @@ class LoginTest extends TestCase
         $user = User::factory()->create([
             'name' => 'test user',
             'email' => 'test@example.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
         ]);
 
         $response = $this->postJson('/api/login', [
@@ -34,7 +34,7 @@ class LoginTest extends TestCase
         $user = User::factory()->create([
             'name' => 'test user',
             'email' => 'john@example.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
         ]);
 
         $response = $this->postJson('/api/login', [

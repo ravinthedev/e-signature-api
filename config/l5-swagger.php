@@ -158,6 +158,11 @@ return [
          * API security definitions. Will be generated into documentation file.
         */
         'securityDefinitions' => [
+            'sanctum' => [
+                'type' => 'http',
+                'scheme' => 'bearer',
+                'bearerFormat' => 'JWT',
+            ],
             'securitySchemes' => [
                 /*
                  * Examples of Security schemes
@@ -206,19 +211,7 @@ return [
                 */
             ],
             'security' => [
-                /*
-                 * Examples of Securities
-                */
-                [
-                    /*
-                    'oauth2_security_example' => [
-                        'read',
-                        'write'
-                    ],
-
-                    'passport' => []
-                    */
-                ],
+                'sanctum' => [],
             ],
         ],
 
